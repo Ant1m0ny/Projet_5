@@ -1,4 +1,6 @@
-import logo from "../../images/logo.svg";
+import { NavLink } from "react-router-dom";
+
+import logo from "../../assets/images/logo.svg";
 import './Header.css';
 
 function Header() {
@@ -10,8 +12,12 @@ function Header() {
 
         <nav className="Header-Navbar">
             <ul>
-                <li className="Header-Navbar-Item active">Accueil</li>
-                <li className="Header-Navbar-Item">À propos</li>
+                <li className="Header-Navbar-Item active">
+                  <NavLink to="/">Accueil</NavLink>
+                </li>
+                <li className="Header-Navbar-Item">
+                  <NavLink to="/about">A Propos</NavLink>
+                </li>
             </ul>
         </nav>
     </header>
