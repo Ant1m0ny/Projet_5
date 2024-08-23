@@ -1,0 +1,59 @@
+@import "../../App.scss";
+
+.Header {
+    display: flex;
+    padding: 20px;
+
+    @include respond-to (tablet) {
+        padding: 56px 50px;
+    }
+}
+
+.Header a {
+    text-decoration: none;
+    color: #000;
+
+    &.active {
+        text-decoration: underline;
+    }
+}
+
+.Header-Logo {
+    max-width: 145px;
+
+    @include respond-to (tablet) {
+        max-width: 215px;
+    }
+}
+
+.Header-Navbar {
+    display: flex;
+
+    @include respond-to (tablet) {
+        width: 100%;
+    }
+}
+
+.Header-Navbar ul {
+    display: flex;
+    gap: 32px;
+    list-style-type: none;
+    padding-left: 30px;
+
+    @include respond-to (tablet) {
+        width: 100%;
+        justify-content: end;
+        gap: 60px;
+    }
+}
+
+.Header-Navbar ul li {
+    font-size: 14px;
+    font-weight: 500;
+
+
+    @include respond-to (tablet) {
+        font-size: 24px;
+    }
+}
+

@@ -1,12 +1,19 @@
+@import "../../../App.scss";
+
 .GalleryCard {
-    width: 340px;
-    height: 340px;
+    width: 335x;
+    height: 225px;
     background-color: #FF6060;
     border-radius: 10px;
     background: linear-gradient(to top, #CC4D4D, #FF6060);
     display: flex;
     align-items: end;
     padding: 16px;
+
+    @include respond-to (tablet) {
+        width: 340px;
+        height: 340px;
+    }
 }
 
 .GalleryCard-title {

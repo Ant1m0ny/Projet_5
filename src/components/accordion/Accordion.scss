@@ -1,0 +1,41 @@
+@import '../../assets/scss/variables.scss';
+
+.accordion {
+    width: 100%;
+
+    &.open {
+        .accordionContent {
+            display: block;
+        }
+        .accordionHeader-arrow {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.accordionHeader {
+    display: flex;
+    justify-content: space-between;
+    background-color: $primary;
+    border-radius: 5px;
+    padding: 10px 20px 10px 15px;
+    color: white;
+    cursor: pointer;
+
+    &-title {
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    &-arrow {
+        transition: transform 0.3s;
+    }
+}
+
+.accordionContent {
+    background-color: $gray;
+    border-radius: 10px 10px 5px 5px;
+    padding: 10px 20px 20px 20px;
+    line-height: 18px;
+    display: none;
+}

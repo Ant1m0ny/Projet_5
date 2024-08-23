@@ -1,4 +1,4 @@
-import "./Gallery.css"
+import "./Gallery.scss"
 import GalleryCard from "./Card/GalleryCard.js"
 
 export default function Gallery() {

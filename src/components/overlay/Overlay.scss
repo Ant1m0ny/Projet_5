@@ -1,0 +1,53 @@
+@import "../../App.scss";
+
+.Overlay {
+    background: var(--overlay-img-url) no-repeat center/cover;
+    position: relative;
+    padding: 16px 32px;
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 80px;
+    margin-bottom: 20px;
+
+    @include respond-to(tablet) {
+        padding: 0 78px ;
+        border-radius: 25px;
+        height: 275px;
+        box-shadow: 0 4px 5px grey;
+        margin-bottom: 50px;
+    }
+}
+
+.OverlayBrithLess {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajustez cette valeur pour contrôler l'assombrissement */
+}
+
+.Overlay p {
+    position: relative;
+    width: 150px;
+    z-index: 10;
+    margin: 0;
+    text-align: left;
+    color: white;
+    filter: none;
+    text-shadow: 2px 2px 4px black;
+    font-weight: bold;
+    font-size: 24px;
+    
+
+    @include respond-to(tablet) {
+        font-size: 48px;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+    }
+}

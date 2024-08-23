@@ -1,4 +1,4 @@
-import "./GalleryCard.css"
+import "./GalleryCard.scss"
 
 function GalleryCard({title}) {
     return ( 

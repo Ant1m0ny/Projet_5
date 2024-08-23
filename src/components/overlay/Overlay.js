@@ -1,4 +1,4 @@
-import './Overlay.css';
+import './Overlay.scss';
 
 export default function Overlay({ imgSrc, text }) {
   return (
