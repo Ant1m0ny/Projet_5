@@ -1,10 +1,11 @@
+import { NavLink } from "react-router-dom";
 import "./GalleryCard.scss"
 
-function GalleryCard({title}) {
+function GalleryCard({annonce}) {
     return ( 
-        <div className="GalleryCard">
-            <p className="GalleryCard-title">{title}</p>
-        </div>
+        <NavLink to={`/annonce/${annonce.id}`} className="GalleryCard" style={{ '--card-img-url': `url(${annonce.cover})` }}>
+            <p className="GalleryCard-title">{annonce.title}</p>
+        </NavLink>
     );
 }
 

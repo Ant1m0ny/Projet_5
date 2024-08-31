@@ -1,0 +1,16 @@
+.annonceHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    margin: 20px 0;
+}
+
+.informations {
+    display: flex;
+    gap: 1rem;
+    margin-top: 20px;
+}

@@ -5,7 +5,8 @@
 
     &.open {
         .accordionContent {
-            display: block;
+            height: auto;
+            padding: 10px 20px;
         }
         .accordionHeader-arrow {
             transform: rotate(180deg);
@@ -33,9 +34,12 @@
 }
 
 .accordionContent {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    transition: 0.3s;
     background-color: $gray;
     border-radius: 10px 10px 5px 5px;
-    padding: 10px 20px 20px 20px;
     line-height: 18px;
-    display: none;
 }

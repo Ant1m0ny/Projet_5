@@ -1,0 +1,11 @@
+@import '../../assets/scss/variables.scss';
+
+.Tag {
+    display: inline-block;
+    text-align: center;
+    background-color: $primary;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}

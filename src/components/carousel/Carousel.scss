@@ -1,0 +1,51 @@
+.carousel {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carouselInner {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.carouselInner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.prevArrow , 
+.nextArrow {
+    height: 100%;
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.prevArrow {
+    left: 10px;
+}
+.prevArrow img {
+    transform: rotate(180deg);
+}
+
+.nextArrow {
+    right: 10px;
+}
+
+.carouselPagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    color: white;
+}

@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@import "../../assets/scss/mixin.scss";
 
 .Overlay {
     background: var(--overlay-img-url) no-repeat center/cover;
@@ -30,7 +30,7 @@
 
 .Overlay p {
     position: relative;
-    width: 150px;
+    width: 200px;
     z-index: 10;
     margin: 0;
     text-align: left;
