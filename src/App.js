@@ -13,40 +13,19 @@ import AnnonceDetails from './pages/AnnonceDetails/AnnonceDetails';
 import NotFound from './pages/notFound/NotFound';
 
 function App() {
-  return ( <
-    div className = "App" >
-    <
-    Header / >
-    <
-    main >
-    <
-    Routes >
-    <
-    Route path = "/"
-    element = {
-      < Home / >
-    }
-    /> <
-    Route path = "/about"
-    element = {
-      < About / >
-    }
-    /> <
-    Route path = "/annonce/:id"
-    element = {
-      < AnnonceDetails / >
-    }
-    /> <
-    Route path = "*"
-    element = {
-      < NotFound / >
-    }
-    /> <
-    /Routes> <
-    /main> <
-    Footer / >
-    <
-    /div>
+  return ( 
+    <div className = "App" >
+      <Header/>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} /> 
+          <Route path="/about" element={<About />} />
+          <Route path="/annonce/:id" element={<AnnonceDetails />} />
+          <Route path="*" element={< NotFound />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 }
 

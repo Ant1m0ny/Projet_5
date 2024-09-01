@@ -1,8 +1,15 @@
+@import "../../assets/scss/mixin.scss";
+
 .carousel {
     height: 300px;
     width: 100%;
     overflow: hidden;
     position: relative;
+    border-radius: 10px;
+    
+    @include respond-to (tablet) {
+        border-radius: 15px;
+    }
 }
 
 .carouselInner {
@@ -32,10 +39,15 @@
     transform: translateY(-50%);
     z-index: 1;
 
+    img {
+        width: 20px;
+    }
 }
+
 .prevArrow {
     left: 10px;
 }
+
 .prevArrow img {
     transform: rotate(180deg);
 }

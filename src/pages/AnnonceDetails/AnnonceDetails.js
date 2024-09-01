@@ -6,6 +6,7 @@ import Accordion from "../../components/accordion/Accordion.js"
 import './AnnonceDetails.scss'
 
 import Tag from "../../components/tag/Tag.js"
+import StarRating from "../../components/starRating/StarRating.js"
 
 export default function AnnonceDetails() {
     const annonceId = useParams().id
@@ -45,9 +46,13 @@ export default function AnnonceDetails() {
                 </div>
             </div>
 
-            <div className="profil">
-                <span>{annonce.host.name}</span>
-                <img src={annonce.host.picture} alt={annonce.host.name} />
+            <div className="host">
+                <div className="profil">
+                    <span>{annonce.host.name}</span>
+                    <img src={annonce.host.picture} alt={annonce.host.name} />
+                </div>
+
+                <StarRating filledStars={annonce.rating} />
             </div>
         </div>
 

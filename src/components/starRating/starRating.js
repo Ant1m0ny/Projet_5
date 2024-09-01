@@ -1,6 +1,7 @@
 import React from 'react';
-import starIcon from './assets/star.svg';
-import './StarRating.css';
+import starIconFill from '../../assets/images/starFull.png';
+import starIconEmpty from '../../assets/images/starEmpty.png';
+import './StarRating.scss';
 
 export default function StarRating({ totalStars = 5, filledStars = 0 }) {
   const validFilledStars = Math.min(filledStars, totalStars);
@@ -8,10 +9,8 @@ export default function StarRating({ totalStars = 5, filledStars = 0 }) {
   const stars = Array.from({ length: totalStars }, (_, index) => (
     <img
       key={index}
-      src={starIcon}
-      alt="star"
-      className={`star ${index < validFilledStars ? 'filled' : ''}`}
-    />
+      src={index < validFilledStars ? starIconFill : starIconEmpty}
+      alt="star" />
   ));
 
   return <div className="star-rating">{stars}</div>;
