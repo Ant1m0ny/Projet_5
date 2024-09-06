@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate} from "react-router-dom"
 import { getAnnonceById } from "../../apiServices"
 import { Carousel } from "../../components/carousel/Carousel.js"
 import Accordion from "../../components/accordion/Accordion.js"
@@ -10,6 +10,7 @@ import StarRating from "../../components/starRating/StarRating.js"
 
 export default function AnnonceDetails() {
     const annonceId = useParams().id
+    const navigate = useNavigate()
 
     const [annonce, setAnnonce] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -17,7 +18,11 @@ export default function AnnonceDetails() {
     useEffect(() => {
         const fecthAnnonce = async () => {
             const data = getAnnonceById(annonceId)
-            setAnnonce(data)
+            if(!data){
+                navigate("/404")
+            } else{
+                setAnnonce(data)
+            }
             setLoading(false) 
         }
         fecthAnnonce()
@@ -27,9 +32,6 @@ export default function AnnonceDetails() {
         return <div>Chargement...</div>
     }
 
-    if (!annonce) {
-        return <div>Annonce non trouvée</div>
-    }
   return (
     <div className="annonce">
         <Carousel images={annonce.pictures}/>
